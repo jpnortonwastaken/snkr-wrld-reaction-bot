@@ -9,15 +9,21 @@ bot = commands.Bot(command_prefix = '!')
 async def on_ready():
     print ("SNKR WRLD BOT IS READY")
 
-async def react(message):
+async def react_success(message):
     #await message.add_reaction("<:ihateleo:818701078265724938>")
     await message.add_reaction("<:wrldW:823624620347359292>")
+
+async def react_suggestions(message):
+    await message.add_reaction("✅")
+    await message.add_reaction("❌")
 
 @bot.event                                             
 async def on_message(message):
     if message.channel.id == 821936235886673960:
         if message.attachments:
-            await react(message)
+            await react_success(message)
+    if message.channel.id == 821938033850449930:
+        await react_suggestions(message)
 
 bot.run("NzQ3NjMyNzI2Mjg2MjcwNTY1.X0RtPA.qQYeCrAD6ViCZk2UFy2TCferT4U")
 
