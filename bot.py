@@ -10,7 +10,6 @@ async def on_ready():
     print ("SNKR WRLD BOT IS READY")
 
 async def react_success(message):
-    #await message.add_reaction("<:ihateleo:818701078265724938>")
     await message.add_reaction("<:wrldW:823624620347359292>")
 
 async def react_suggestions(message):
@@ -26,6 +25,3 @@ async def on_message(message):
         await react_suggestions(message)
 
 bot.run("NzQ3NjMyNzI2Mjg2MjcwNTY1.X0RtPA.qQYeCrAD6ViCZk2UFy2TCferT4U")
-
-# copy and paste everything above this line
-# everything below this is just an example of what final code could/would/should look like
